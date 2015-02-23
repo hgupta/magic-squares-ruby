@@ -26,7 +26,7 @@ Files
  2. test_magic_square.rb - test cases for orders 3, 4, 6 and 5
 
 Usage
-==
+--
 
 To execute code:
 
@@ -41,4 +41,6 @@ To run test cases:
 
     > ruby test_magic_square.rb
 
+Note
+==
 Ruby version `2.1.5` used for testing.
