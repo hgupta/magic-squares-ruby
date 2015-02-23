@@ -46,43 +46,6 @@ class MagicSquare
     raise NoMethodError.new('[] method not defined with row and col arguments')
   end
 
-  def magic_square?
-    puts "Square of Order: #{@order}"
-    puts "Number of cells in sqaure: #{@size}"
-
-    array = Array.new(@size)
-    (0...@order).each do |i|
-      (0...@order).each do |j|
-        index = self[i,j] - 1
-        return false if (index < 0) || (index >= @size) || array[index]
-        array[index] = true
-      end
-    end
-    return false unless array.all?
-
-    sum = @order * (@order * @order + 1) / 2
-
-    puts "Magic sum must be: #{sum}"
-
-    (0...@order).each do |i|
-      # Sum of Row
-      return false if sum != (0...@order).inject(0) { |s, j| s + self[i,j] }
-
-      # Sum of Column
-      return false if sum != (0...@order).inject(0) { |s, j| s + self[j,i] }
-    end
-
-    # Sum of Diagonal from Upper left to lower right
-    return false if sum != (0...@order).inject(0) { |s, i| s + self[i,i] }
-
-    # Sum of Diagonal from upper right to lower left
-    return false if sum != (0...@order).inject(0) { |s, i| s +
-                                                    self[i, @order - 1 - i] }
-
-    # Everything is OK
-    true
-  end
-
   attr_accessor :order, :size
   private
   def initialize order
@@ -159,5 +122,5 @@ class LuxMagicSquare < MagicSquare
 end
 
 if __FILE__ == $0
-  puts MagicSquare::Factory(ARGV.shift)#.magic_square?
+  puts MagicSquare::Factory(ARGV.shift)
 end
