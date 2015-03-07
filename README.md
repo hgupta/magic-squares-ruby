@@ -6,15 +6,15 @@ so that each row, column, and the two long diagonals have the same sum. For
 example, a magic square for N = 5 could be:
 
     +------------------------+
-    | 15 | 8 | 1 | 24 | 17 |
+    | 15 |  8 |  1 | 24 | 17 |
     +------------------------+
-    | 16 | 14 | 7 | 5 | 23 |
+    | 16 | 14 |  7 |  5 | 23 |
     +------------------------+
-    | 22 | 20 | 13 | 6 | 4 |
+    | 22 | 20 | 13 |  6 |  4 |
     +------------------------+
-    | 3 | 21 | 19 | 12 | 10 |
+    |  3 | 21 | 19 | 12 | 10 |
     +------------------------+
-    | 9 | 2 | 25 | 18 | 11 |
+    |  9 |  2 | 25 | 18 | 11 |
     +------------------------+
 
 In this case the magic sum is 65. All rows, columns, and both diagonals add up
